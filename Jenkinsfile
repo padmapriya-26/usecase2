@@ -8,7 +8,7 @@ pipeline {
             steps {  
                 echo "*********** cloning the code **********"  
                 sh 'rm -rf usecase2 || true'  
-                sh 'https://github.com/padmapriya-26/usecase2.git' 
+                sh 'git clone https://github.com/padmapriya-26/usecase2.git' 
             }  
         }   
         stage('Docker image build') {  
