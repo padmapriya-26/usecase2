@@ -38,8 +38,8 @@ resource "google_compute_instance" "instance1" {
         sleep 30
         
         # Pull and run container
-        sudo docker pull padmapriya26/flask2:v1
-        sudo docker run -d --name c2 -p 81:5000 padmapriya26/flask2:v1
+        sudo docker pull padmapriya26/pyy:v1
+        sudo docker run -d --name c2 -p 81:5000 padmapriya26/pyy:v1
         
         echo "Application deployed successfully!"
     EOT
