@@ -38,7 +38,7 @@ resource "google_compute_instance" "instance1" {
         sleep 30
         
         # Pull and run container
-        sudo docker pull padmapriya26/calci:v1
-        sudo docker run -d --name c1 -p 80:8081 padmapriya26/calci:v1
+        sudo docker pull padmapriya26/spring:v1
+        sudo docker run -d --name c1 -p 80:8080 padmapriya26/spring:v1
     EOT
 }
