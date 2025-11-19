@@ -15,7 +15,7 @@ pipeline {
             steps {  
                 echo "********** building is done ************"  
                 dir('usecase2') {  
-                    sh 'docker build -t padmapriya26/calci:v1 .'  
+                    sh 'docker build -t padmapriya26/spring:v1 .'  
                 }  
             }  
         }
@@ -23,7 +23,7 @@ pipeline {
             steps {  
                 sh """  
                 docker login -u ${DOCKERHUB_CREDENTIALS_USR} -p ${DOCKERHUB_CREDENTIALS_PSW}  
-                docker push padmapriya26/calci:v1  
+                docker push padmapriya26/spring:v1  
                 """  
             }  
         }
