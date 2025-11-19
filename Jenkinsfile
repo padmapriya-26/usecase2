@@ -37,5 +37,13 @@ pipeline {
                 }
             }
         }
+     stage('Ansible Deploy') {
+       steps {
+        sh '''
+        ansible-playbook -i ip.txt ansible.yaml --private-key ~/.ssh/id_rsa
+        '''
+    }
+}
+
     }  
 }
