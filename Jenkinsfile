@@ -15,7 +15,7 @@ pipeline {
             steps {  
                 echo "********** building is done ************"  
                 dir('usecase2') {  
-                    sh 'docker build -t padmapriya26/flask2:v1 .'  
+                    sh 'docker build -t padmapriya26/pyy:v1 .'  
                 }  
             }  
         }
@@ -23,7 +23,7 @@ pipeline {
             steps {  
                 sh """  
                 docker login -u ${DOCKERHUB_CREDENTIALS_USR} -p ${DOCKERHUB_CREDENTIALS_PSW}  
-                docker push padmapriya26/flask2:v1  
+                docker push padmapriya26/pyy:v1  
                 """  
             }  
         }
