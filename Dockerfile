@@ -1,4 +1,3 @@
-//python application
 FROM python:3.9-slim
 RUN apt update
 RUN pip install flask
