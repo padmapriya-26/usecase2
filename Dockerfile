@@ -3,7 +3,8 @@ RUN apt update -y
 RUN apt install openjdk-21-jdk -y
 RUN apt install maven -y
 WORKDIR /app
-ADD https://github.com/Siva825/spring-petclinic.git .
+RUN git clone https://github.com/Siva825/spring-petclinic.git 
+WORKDIR /app/spring-petclinic
 RUN mvn clean package -Dskiptests  
 EXPOSE 8080
 CMD ["java", "-jar", "/app/target/spring-petclinic-3.5.0-SNAPSHOT.jar"]
