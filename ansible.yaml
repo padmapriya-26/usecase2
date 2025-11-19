@@ -1,0 +1,17 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Pull image
+      docker_image:
+        name: padmapriya26/flask2:v1
+        source: pull
+
+    - name: Run container
+      docker_container:
+        name: flask
+        image: padmapriya26/flask2:v1
+        state: started
+        restart_policy: always
+        published_ports:
+          - "80:5000"
